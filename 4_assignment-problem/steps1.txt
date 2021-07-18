@@ -1,0 +1,4 @@
+# build the image of the python app, in the workdir python-app
+
+$ docker build .
+$ docker run -it -t bmi 89d202915bf4

@@ -1,0 +1,7 @@
+# build the image of the nodes app, in the workdir node-app
+
+docker build .
+docker rmi 1642b3e00d1a
+
+docker build -t nodesapp:latest .
+docker run -p 8080:8080 --rm --name nodesappcontainer nodesapp:latest
