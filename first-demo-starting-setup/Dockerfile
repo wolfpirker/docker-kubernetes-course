@@ -8,6 +8,9 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
+
+# VOLUME [ "/app/node_modules" ]
+
 
 CMD ["node", "app.mjs"]

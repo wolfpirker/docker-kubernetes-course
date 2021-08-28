@@ -10,4 +10,9 @@ COPY . /app
 
 EXPOSE 8080
 
-CMD ["node", "server.js"]
+# VOLUME [ "/app/node_modules" ] # anonymous volume
+
+# CMD ["node", "server.js"]
+
+# to use nodemon:
+CMD ["npm", "start"] 
