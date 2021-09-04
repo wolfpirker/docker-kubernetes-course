@@ -8,7 +8,9 @@ RUN npm install
 
 COPY . /app
 
-EXPOSE 8080
+ARG DEFAULT_PORT=8080
+ENV PORT 8080
+EXPOSE $PORT
 
 # VOLUME [ "/app/node_modules" ] # anonymous volume
 
