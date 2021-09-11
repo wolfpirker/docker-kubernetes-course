@@ -11,9 +11,23 @@ services:
     #  # alternative also: env files with environment data
     env_file:
       - ./env/mongo.env
-  #backend:
+  backend:
+    build: ./backend
+    ports:
+      - '80:80'
+    volumes:
+      - logs:/apps/logs
+      - ./backend:/app
+      - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
 
-  #frontend:
+  frontend:
+    build: ./frontend
+    
 
 volumes:
   data: 
+  logs:
