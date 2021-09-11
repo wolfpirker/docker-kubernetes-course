@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  mongodb:
+    image: 'mongo'
+    volumes:
+      - data:/data/db:ro
+    #environment:
+    #  # MONGO_INITDB_ROOT_USERNAME: max
+    #  # MONGO_INITDB_ROOT_PASSWORD: 123
+    #  # - MONGO_INITDB_ROOT_USERNAME=max
+    #  # alternative also: env files with environment data
+    env_file:
+      - ./env/mongo.env
+  #backend:
+
+  #frontend:
+
+volumes:
+  data: 
